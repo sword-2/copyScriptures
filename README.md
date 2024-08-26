@@ -11,22 +11,23 @@ There is very good administration at church. With a lot of spiritual programs, o
 
 
 ## Languages attempted / planned:
-As there is time, projects to consider ...
+The following languages are just initial ones, no preference is intended, as some languages are not listed while starting.
 
 ### Go (Google)
-No code ready, just copied and adapted files from last project.
+Code just copied from last project and not finished.
 
-[project list, github](https://github.com/search?utf8=%E2%9C%93&q=topic%3Abible+topic:go&type=Repositories&ref=searchresults)
+Past Go code (partial):
+- [GitHub list](https://github.com/search?utf8=%E2%9C%93&q=topic%3Abible+topic:go&type=Repositories&ref=searchresults)
+- [Go repo](https://pkg.go.dev/search?q=bible)
 
 ### swift (Apple)
 
-Past swift code to consider:
+Past swift code (partial):
 - [peterkejun/Relative\_Bible](https://github.com/peterkejun/Relative_Bible)
 - [yen936/kainotes\_public](https://github.com/yen936/kainotes_public)
 
 ### C# (Microsoft)
-No code yet.
 
-
-Past C# project list to consider:
-[projects list, github](https://github.com/search?utf8=%E2%9C%93&q=topic%3Abible+language%3Ac%23&type=repositories)
+Past C# code (partial):
+- [GitHub list](https://github.com/search?utf8=%E2%9C%93&q=topic%3Abible+language%3Ac%23&type=repositories)
+- [Sourceforge list, production stable](https://sourceforge.net/directory/c-sharp/?q=bible&developmentstatus=5-production-stable)
