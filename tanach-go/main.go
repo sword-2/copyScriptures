@@ -1,4 +1,4 @@
-// main.go. Reads in file liaison.json, outputs a partial html file (*.l14)
+// main.go.
 
 package main
 
@@ -10,6 +10,11 @@ import (
 
 
 func main() {
+	//check if there are any command line arguments
+	 fmt.Println("main.go - number arges=", len(os.Args), "; the args=", os.Args)
+	//argsWithProg := os.Args
+    //argsWithoutProg := os.Args[1:]
+
 	tst := "Books/Genesis.xml"
 	//tst := "test.xml"
 
