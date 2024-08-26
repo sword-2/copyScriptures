@@ -18,8 +18,8 @@ func main() {
 	tst := "Books/Genesis.xml"
 	//tst := "test.xml"
 
-	fmt.Println("go's main function about to try plantMain()\n")
-	fmt.Println("go's main function after plantMain()\n")
+	fmt.Println("go's main function ran\n")
+	//fmt.Println("go's main function\n")
 
 	tanach.ReadUnmarshalXml(&tst)
 	tanach.PrintTeiHeader()

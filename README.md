@@ -11,13 +11,22 @@ There is very good administration at church. With a lot of spiritual programs, o
 
 
 ## Languages attempted / planned:
-As there is time, languages to apply included ...
+As there is time, projects to consider ...
 
 ### Go (Google)
-Code not ready, just copied and adapted from last project.
+No code ready, just copied and adapted files from last project.
 
-###swift (Apple)
-No content yet
+[project list, github](https://github.com/search?utf8=%E2%9C%93&q=topic%3Abible+topic:go&type=Repositories&ref=searchresults)
 
-###C# (Microsoft)
-No content yet.
+### swift (Apple)
+
+Past swift code to consider:
+- [peterkejun/Relative\_Bible](https://github.com/peterkejun/Relative_Bible)
+- [yen936/kainotes\_public](https://github.com/yen936/kainotes_public)
+
+### C# (Microsoft)
+No code yet.
+
+
+Past C# project list to consider:
+[projects list, github](https://github.com/search?utf8=%E2%9C%93&q=topic%3Abible+language%3Ac%23&type=repositories)
