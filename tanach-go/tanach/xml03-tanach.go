@@ -5,7 +5,20 @@ import (
 	"encoding/xml"
 )
 
-//details in structure for tanach tags
+
+type Verse struct {
+		XMLName xml.Name `xml:"v"`
+		N string `xml:"n,attr"`  //verse number
+		W []string `xml:"w"` //array of words
+}
+
+type Chapter struct {
+	XMLName xml.Name `xml:"c"`
+	N string `xml:"n,attr"`  //chapter number
+	V []Verse  `xml:"v"`
+    Vs  string `xml:"vs"` //verse count for this chapter
+}
+
 
 type Tanach struct {
 	XMLName xml.Name `xml:"tanach"`
@@ -25,13 +38,3 @@ type Tanach struct {
 	}
 }
 
-type Chapter struct {
-	XMLName xml.Name `xml:"c"`
-	V []Verse  `xml:"v"`
-    Vs  string `xml:"vs"` //verse count for this chapter
-}
-
-type Verse struct {
-		XMLName xml.Name `xml:"v"`
-		W []string `xml:"w"` //each individual word
-}

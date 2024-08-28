@@ -1,4 +1,8 @@
-// functions for reading, sorting, and writing to an .l14 file
+// Tanach is assumed to mean Hebrew bible
+//File xml01* has the top level structure.
+//File xml02* has structure details for teiHeader tags
+//File xml03* has structure details for tanach tags
+//File xml04* has structure details for notes tags
 package tanach
 
 import (
@@ -11,6 +15,7 @@ import (
 	 //"strconv"
 )
 
+//function check is an attempt to handle possible errors instead of having a bunch of error handlers
 func check(e error) {
 	if e != nil {
         panic(e)
@@ -19,7 +24,8 @@ func check(e error) {
 	//}
 }
 
-func RemoveFile(path *string) { //if an old .l14 is present, remove it
+//This function is just left over from a previous project and to be recycled or deleted
+func RemoveFile(path *string) { 
 	fmt.Println("\ntanach.RemoveFile() called on path: ", *path)
 	/*
 	if _, err := os.Stat(*path); err == nil {
@@ -31,6 +37,7 @@ func RemoveFile(path *string) { //if an old .l14 is present, remove it
 	*/
 }
 
+//A function to do the Go method of transforming json to program variables. The Go term is unmarshal
 func ReadUnmarshalXml(path *string) {
 	fmt.Println("\ntanach.ReadFile() called for path: ", *path)
 
@@ -45,6 +52,7 @@ func ReadUnmarshalXml(path *string) {
 
 }
 
+//Initial printing of selected tei Header tags to verify the unmarshal worked.
 func PrintTeiHeader() {
 	fmt.Println("following are selected tags from within the teiHeader ...")
 	fmt.Println("\ttitle ...")
@@ -58,6 +66,7 @@ func PrintTeiHeader() {
 }
 
 
+//Initial printing of selected scriptures to verify the unmarshal worked.
 func PrintTanach() {
 	fmt.Println("following are selected tags from within the tanach ...")
 	fmt.Println("\ttanachUsXml1.Tanach.Book.Names.Name=", tanachUsXml1.Tanach.Book.Names.Name)
@@ -74,6 +83,7 @@ func PrintTanach() {
 }
 
 
+//Initial printing of selected notes to verify the unmarshal worked.
 func PrintNotes() {
 	fmt.Println("following are selected tags from within the notes ...")
 	fmt.Println("\ttanachUsXml1.Notes.Note[0].Code=", tanachUsXml1.Notes.Note[0].Code)
@@ -85,19 +95,19 @@ func PrintNotes() {
 }
 
 
-
+//This function is just leftover from previous project waiting to be recycled or deleted.
 func SortStruct(sortCode *int) {
 	fmt.Println("\ntanach.SortStruct() called for int:", *sortCode)
 
 	/*
 	// Sort by one way by removing comments
-	if *sortCode == 1 { //Agency name
-		fmt.Println("SortStruct() sortCode == 1 for Agency name")
+	if *sortCode == 1 { 
+		fmt.Println("SortStruct() sortCode == 1")
 		sort.Slice(r.Agencies, func(i, j int) bool {
 			return r.Agencies[i].Agency < r.Agencies[j].Agency
 		})
-	} else if *sortCode == 2 { //AgencyRef aka legal reference
-		fmt.Println("SortStruct() sortCode == 2 for legal reference")
+	} else if *sortCode == 2 {
+		fmt.Println("SortStruct() sortCode == 2")
 		sort.Slice(r.Agencies, func(i, j int) bool {
 			return r.Agencies[i].AgencyRef < r.Agencies[j].AgencyRef
 		})
@@ -108,6 +118,7 @@ func SortStruct(sortCode *int) {
 	*/
 }
 
+//Another function leftover from previous project copy, to be recycled or deleted.
 func PrintStruct() {
 	fmt.Println("\ntanach.PrintStruct() called")
 

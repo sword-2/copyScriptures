@@ -5,7 +5,15 @@ import (
 	"encoding/xml"
 )
 
+
+
 //details in structure for teiHeader tags
+
+//name element used more than once
+type Name []struct {
+	XMLName xml.Name `xml:"name"`
+	Type string `xml:"type,attr"`
+}
 
 type BibleItem struct {
 	XMLName xml.Name `xml:"bibleItem"`
@@ -17,6 +25,10 @@ type BibleItem struct {
 		Publisher string   `xml:"publisher"`
 		PubPlace []string   `xml:"pubPlace"`
 		Date string   `xml:"date"`
+	}
+	Idno struct {
+		XMLName xml.Name `xml:"idno"`
+		Type string `xml:"type,attr"`
 	}
 }
 
@@ -36,12 +48,18 @@ type Correction struct {
 			XMLName xml.Name `xml:"fileDesc"`
 			TitleStmt struct {
 				XMLName xml.Name `xml:"titleStmt"`
-				Title []string `xml:"title"`
+				//Title []string `xml:"title"`
+				Title []struct {
+					XMLName xml.Name `xml:"title"`
+					Level string `xml:"level,attr"`
+					Type string `xml:"type,attr"`
+				}
 				Editor []string `xml:"editor"`
 				RespStmt struct {
 					XMLName xml.Name `xml:"respStmt"`
 					Resp string `xml:"resp"`
-					Name []string `xml:"name"`
+					Name []Name `xml:"name"`
+					//Name []string `xml:"name"`
 				}
 			}
 			EditionStmt struct {
@@ -63,8 +81,13 @@ type Correction struct {
 				XMLName xml.Name `xml:"publicationStmt"`
 				Distributor struct {
 					XMLName xml.Name `xml:"distributor"`
-					Name []string  `xml:"name"`
-					Availability string  `xml:"availability"`
+					Name []Name `xml:"name"`
+					//Name []string  `xml:"name"`
+					//Availability string  `xml:"availability"`
+					Availability struct {
+						XMLName xml.Name `xml:"availability"`
+						Status string `xml:"status,attr"`
+					}
 			}
 			NotesStmt struct {
 				XMLName xml.Name `xml:"notesStmt"`
@@ -84,7 +107,11 @@ type Correction struct {
 		Date string  `xml:"date"`
 		LangUsage struct {
 			XMLName xml.Name `xml:"langUsage"`
-			Language string   `xml:"language"`
+			//Language string   `xml:"language"`
+			Language struct {
+				XMLName xml.Name `xml:"language"`
+				Ident string   `xml:"ident,attr"`
+			}
 		}
 	}
 }

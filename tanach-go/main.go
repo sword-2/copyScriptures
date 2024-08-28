@@ -4,38 +4,45 @@ package main
 
 import (
 	"fmt"
-	//"tanach"
+	"os"
 	"tanach-go/tanach"
 )
 
 
-func main() {
-	//check if there are any command line arguments
-	 fmt.Println("main.go - number arges=", len(os.Args), "; the args=", os.Args)
-	//argsWithProg := os.Args
-    //argsWithoutProg := os.Args[1:]
-
-	tst := "Books/Genesis.xml"
-	//tst := "test.xml"
-
-	fmt.Println("go's main function ran\n")
-	//fmt.Println("go's main function\n")
-
-	tanach.ReadUnmarshalXml(&tst)
+func tanachTest(t *string) {
+	tanach.ReadUnmarshalXml(t)
 	tanach.PrintTeiHeader()
 	tanach.PrintTanach()
 	tanach.PrintNotes()
-	tanach.WriteFile(&tst)
-	var sortCode int // variable declaration
-	sortCode = 2 //1 sort on agency name, 2 sort on legal reference.
-	tanach.SortStruct(&sortCode)
-	tanach.PrintStruct()
-	tanach.RemoveFile(&tst)
-	//tanach.RemoveOldL14(&pathL14) //if an old .l14 is present, remove it
-	//pathTanach := "Tanach/Amons.xml"
+}
 
-	//sortCode = 2 //1 sort on agency name, 2 sort on legal reference.
-	//tanach.SortStruct(&sortCode)
-	//tanach.PrintStruct()
-	//tanach.WriteL14(&pathL14)
+
+
+func main() {
+	fmt.Println("go's main function ran\n")
+	testFile := "Books/Genesis.xml" //initial file to load
+
+	//check if there are any command line arguments
+	var arg string = ""
+	if len(os.Args) != 2 {
+		fmt.Println("main.go - expected 2 arguments, received:", len(os.Args), "; the args were =", os.Args)
+		return
+	} else {
+		//argsWithProg := os.Args
+		arg = os.Args[1]
+	 }
+
+	switch arg {
+        case "1":
+			tanachTest(&testFile)
+        case "2":
+			tanach.WriteFile(&testFile)
+			var sortCode int // variable declaration
+			sortCode = 2 //random code
+			tanach.SortStruct(&sortCode)
+			tanach.PrintStruct()
+			tanach.RemoveFile(&testFile)
+        default:
+			fmt.Println("Got unexpected arg not in range: ", arg)
+    }
 }

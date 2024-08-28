@@ -1,4 +1,6 @@
 package tanach
+
+
 //This is the structure of top level storage for tanach.us xml files. The details may be divided to separate files
 import (
 	"encoding/xml"
