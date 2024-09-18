@@ -1,7 +1,11 @@
 // Tanach is assumed to mean Hebrew bible
+//
 //File xml01* has the top level structure.
+//
 //File xml02* has structure details for teiHeader tags
+//
 //File xml03* has structure details for tanach tags
+//
 //File xml04* has structure details for notes tags
 package tanach
 
