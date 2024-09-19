@@ -2,10 +2,8 @@
 
 ## Purpose
 
-The repo essentially copies some scriptures from other pages.
+The repo essentially copies scriptures from other pages and may add supporting material and software.
 
-The content is not checked for accuracy since it was not known how to read Hebrew and Greek at this time. Even though not checked, content in repo facilitates software programs reading from this location, as part of checking.
+Some content was not spot checked like the Hebrew and Greek files, since it was not known how to read those langauges at this time. Even though not checked, content in the repo facilitates software programs reading from this location, part of checking those files.
 
-Software on this site will eventually move to its own separate repo.
-
-Initial Hebrew and Greek scriptures will be coming from different web servers. Thus, git submodules may be used to merge content from the different sites.
+git submodules are being tried to divide scriptures received from different sites and also separate software from scriptures, etc. 
