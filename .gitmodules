@@ -1,0 +1,6 @@
+[submodule "scripture-Greek"]
+	path = scripture-Greek
+	url = https://github.com/sword-2/SBLGNT
+[submodule "scripture-Hebrew"]
+	path = scripture-Hebrew
+	url = https://github.com/sword-2/tanach.us
