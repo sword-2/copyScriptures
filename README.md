@@ -2,8 +2,8 @@
 
 ## Purpose
 
-The repo essentially copies scriptures from other pages and may add supporting material and software.
+The repo is in progress due to some learning curves.
 
-Some content was not spot checked like the Hebrew and Greek files, since it was not known how to read those langauges at this time. Even though not checked, content in the repo facilitates software programs reading from this location, part of checking those files.
+Some scriptures are getting copied or forked from existing repos. Later some supporting files and software might be added.
 
-git submodules are being tried to divide scriptures received from different sites and also separate software from scriptures, etc. 
+The repo intends to facilitate personal software programs to read from this location.
